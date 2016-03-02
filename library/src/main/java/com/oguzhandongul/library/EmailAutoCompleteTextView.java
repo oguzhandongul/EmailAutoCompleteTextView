@@ -1,5 +1,5 @@
 
-package com.oguzhandongul.emailautocompletetextview;
+package com.oguzhandongul.library;
 
 import android.content.Context;
 import android.content.res.TypedArray;
