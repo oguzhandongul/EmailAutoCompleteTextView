@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">EmailAutoCompleteTextView</string>
+    <string name="prompt_email">E-mail address</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">SIGN IN</string>
+    <string name="action_sign_in_short">SIGN IN</string>
+
+
+    <!--Mail domain list-->
+    <array name="domains">
+        <item>gmail.com</item>
+        <item>hotmail.com</item>
+        <item>hotmail.com.tr</item>
+        <item>yahoo.com</item>
+        <item>outlook.com</item>
+        <item>yandex.com</item>
+    </array>
+
+</resources>
