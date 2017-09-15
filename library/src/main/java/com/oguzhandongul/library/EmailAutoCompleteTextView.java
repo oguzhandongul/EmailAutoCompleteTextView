@@ -3,18 +3,19 @@ package com.oguzhandongul.library;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Typeface;
+import android.support.v7.widget.AppCompatAutoCompleteTextView;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.Filter;
 import android.widget.Filterable;
 
 import java.util.ArrayList;
 
-public class EmailAutoCompleteTextView extends AutoCompleteTextView {
+public class EmailAutoCompleteTextView extends AppCompatAutoCompleteTextView {
 
     private MailsAutoCompleteAdapter newQueryAdapter;
     private ArrayList<String> queryResultList = new ArrayList<>();
@@ -40,7 +41,12 @@ public class EmailAutoCompleteTextView extends AutoCompleteTextView {
         if (attrs != null) {
             TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.EmailAutoCompleteTextView);
             CharSequence[] entries = a.getTextArray(R.styleable.EmailAutoCompleteTextView_android_entries);
+            String fontName = a.getString(R.styleable.EmailAutoCompleteTextView_atFontName);
             boolean isSuggestionEnabled = a.getBoolean(R.styleable.EmailAutoCompleteTextView_eactSuggestion, true);
+            if (fontName != null) {
+                Typeface myTypeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/" + fontName);
+                setTypeface(myTypeface);
+            }
             if (entries != null) {
                 //creates new domain list from xml attribute
                 domains = new ArrayList<>();

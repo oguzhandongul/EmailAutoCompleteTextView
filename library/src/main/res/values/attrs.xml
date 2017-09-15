@@ -2,6 +2,7 @@
 <resources>
 
     <declare-styleable name="EmailAutoCompleteTextView">
+        <attr name="atFontName" format="string" />
         <attr name="eactSuggestion" format="boolean" />
         <attr name="android:entries" />
     </declare-styleable>
